@@ -8,6 +8,8 @@
   --primary-white-color-60: rgba(255, 255, 255, 0.6);
   --primary-light-color-button: #f5f4fa;
   --primary-border-color: #eeeeee;
+  --primary-white-color-10: rgba(255, 255, 255, 0.1);
+  --primary-icon-color: #afb1b8;
 }
 * {
   box-sizing: border-box;
@@ -136,6 +138,19 @@ img {
   color: var(--hover-button-color);
 }
 
+.icon-header {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.icon-header {
+  margin-right: 10px;
+}
+
+.icon-header:hover {
+  fill: var(--hover-button-color);
+}
+
 /* Конец общего header */
 
 /* Студио Main */
@@ -166,6 +181,17 @@ img {
 
 .name-list:last-child {
   margin-right: 0;
+}
+.contain {
+  width: 270px;
+  height: 120px;
+  background-color: var(--primary-light-color-button);
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.icon-oppo {
+  margin: 25px 100px;
 }
 
 .opportunities .name {
@@ -247,6 +273,8 @@ img {
 }
 
 .position {
+  margin-bottom: 16px;
+
   color: var(--primary-text-color);
 
   font-weight: 400;
@@ -254,6 +282,15 @@ img {
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.social-icon-community {
+  fill: var(--primary-icon-color);
+  margin: 12px;
+}
+
+.community-link:hover .social-icon-community {
+  fill: var(--primary-white-color);
 }
 
 /* Бар Студио */
@@ -370,6 +407,10 @@ img {
   margin-bottom: 15px;
 }
 
+.item:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .item:nth-child(n + 6) {
   margin-bottom: 0;
 }
@@ -411,6 +452,10 @@ img {
   padding-bottom: 60px;
 }
 
+.container-footer {
+  display: flex;
+  align-items: baseline;
+}
 .logo-light {
   color: var(--primary-white-color);
 }
@@ -452,4 +497,45 @@ img {
 .address:focus .footer-link:focus,
 .footer-link:hover {
   color: var(--hover-button-color);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  color: var(--primary-white-color);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.link-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-white-color-10);
+  margin-right: 10px;
+}
+
+.link-icon:last-child {
+  margin-right: 0;
+}
+
+.social-icon {
+  fill: var(--primary-white-color);
+  margin: 12px;
+}
+
+.link-icon:hover,
+.link-icon:focus {
+  background-color: var(--hover-button-color);
+}
+
+.social-container {
+  margin-left: 70px;
 }
