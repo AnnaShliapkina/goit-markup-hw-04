@@ -9,6 +9,9 @@
   --primary-light-color-button: #f5f4fa;
   --primary-border-color: #eeeeee;
 }
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: var(--primary-white-color);
@@ -259,10 +262,6 @@ img {
   padding-bottom: 94px;
 }
 
-.work-section {
-  padding-top: 0;
-}
-
 .bar {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -270,6 +269,19 @@ img {
   text-align: center;
   min-height: 600px;
 }
+
+.overlay {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/background-image\(1\).jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .title-bar {
   color: var(--primary-white-color);
   margin-bottom: 30px;
