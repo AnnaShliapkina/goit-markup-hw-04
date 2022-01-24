@@ -27,6 +27,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -122,7 +126,8 @@ img {
 }
 
 .auto-link {
-  display: block;
+  display: flex;
+  align-items: center;
 
   color: var(--primary-text-color);
 
@@ -183,6 +188,9 @@ img {
   margin-right: 0;
 }
 .contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
   background-color: var(--primary-light-color-button);
@@ -190,9 +198,7 @@ img {
   border-radius: 4px;
 }
 
-.icon-oppo {
-  margin: 25px 100px;
-}
+
 
 .opportunities .name {
   margin-bottom: 10px;
@@ -230,6 +236,7 @@ img {
 }
 
 .community-item {
+  background-color: var(--primary-white-color);
   margin-left: 30px;
   width: 270;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -286,11 +293,21 @@ img {
 
 .social-icon-community {
   fill: var(--primary-icon-color);
-  margin: 12px;
 }
 
-.community-link:hover .social-icon-community {
+.community-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.community-link:hover .social-icon-community,
+.community-link:focus .social-icon-community {
   fill: var(--primary-white-color);
+  background-color: var(--hover-button-color);
 }
 
 /* Бар Студио */
@@ -304,7 +321,7 @@ img {
   padding-bottom: 200px;
   background-color: var(--primary-bar-color);
   text-align: center;
-  min-height: 600px;
+  /* min-height: 600px; */
 }
 
 .overlay {
@@ -351,14 +368,29 @@ img {
 
 .clients {
   display: flex;
+  /* justify-content: center; */
+}
+
+.client-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  border: 1px solid var(--primary-icon-color);
+  border-radius: 4px;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--hover-button-color);
 }
 
 .client {
   margin-right: 30px;
   width: 170px;
   height: 92px;
-  border: 1px solid var(--primary-icon-color);
+  /* border: 1px solid var(--primary-icon-color); */
 }
 
 .client:last-child {
@@ -370,7 +402,8 @@ img {
   fill: var(--primary-icon-color);
 }
 
-.client:hover .icon-client {
+.client-link:hover .icon-client,
+.client-link:focus .icon-client {
   fill: var(--hover-button-color);
 }
 
@@ -387,6 +420,7 @@ img {
 }
 
 .button {
+  cursor: pointer;
   display: inline-block;
   padding-left: 22px;
   padding-right: 22px;
@@ -411,7 +445,7 @@ img {
 .buttons .button:focus {
   background-color: var(--hover-button-color);
   color: var(--primary-white-color);
-  box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .samples {
@@ -437,10 +471,16 @@ img {
   margin-bottom: 15px;
 }
 
-.item:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
+.sample-link {
+  display: block;
 }
+
+.sample-link:hover,
+.sample-link:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
 
 .item:nth-child(n + 6) {
   margin-bottom: 0;
@@ -494,14 +534,6 @@ img {
   margin-top: 20px;
 }
 
-.footer-item {
-  padding-bottom: 9px;
-}
-
-.footer-item:last-child {
-  padding-bottom: 0;
-}
-
 .footer-link {
   color: var(--primary-white-color-60);
 
@@ -513,8 +545,15 @@ img {
   text-decoration: none;
 }
 
-.address {
+.footer-item {
   margin-bottom: 9px;
+}
+
+.footer-item:last-child {
+  margin-bottom: 0;
+}
+
+.address {
   color: var(--primary-white-color);
 
   font-style: normal;
@@ -559,7 +598,6 @@ img {
 
 .social-icon {
   fill: var(--primary-white-color);
-  margin: 12px;
 }
 
 .link-icon:hover,
