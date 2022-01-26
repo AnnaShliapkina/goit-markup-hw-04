@@ -319,7 +319,6 @@ img {
   padding-bottom: 200px;
   background-color: var(--primary-bar-color);
   text-align: center;
-  /* min-height: 600px; */
 }
 
 .overlay {
@@ -385,6 +384,8 @@ img {
 }
 
 .client {
+  display: flex;
+  justify-content: center;
   margin-right: 30px;
   width: 170px;
   height: 92px;
@@ -396,7 +397,7 @@ img {
 }
 
 .icon-client {
-  margin: 16px 32px;
+  /* margin: 16px 32px; */
   fill: var(--primary-icon-color);
 }
 
@@ -580,12 +581,14 @@ img {
   margin-bottom: 20px;
 }
 
-/* .link-icon { */
 .community-link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--primary-white-color-10);
+  /* margin-right: 10px; */
+}
+.link-icon {
   margin-right: 10px;
 }
 
